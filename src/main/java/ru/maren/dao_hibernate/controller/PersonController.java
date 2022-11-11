@@ -14,6 +14,10 @@ import java.util.Optional;
 public class PersonController {
     private final Service service;
 
+    @GetMapping("/hi")
+    public String getHi(){
+        return "hi";
+    }
     @GetMapping("/by-city")
     public List<Person> getPersonsByCity(@RequestParam String city){
         return service.getPersonsByCity(city);
